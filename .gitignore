@@ -1,3 +1,7 @@
+# Exclude secrets, but include encrypted secrets
+**/*secrets*.*
+!**/*secrets*.enc.yaml
+
 # Local .terraform directories
 .terraform/
 
