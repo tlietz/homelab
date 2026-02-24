@@ -10,6 +10,8 @@ Ideally there will be nothing here eventually
 - `echo "export KUBECONFIG=/etc/rancher/k3s/k3s.yaml" >> ~/.bashrc`
 - `echo "source <(k3s completion bash)" >> ~/.bashrc`
 - `echo "complete -F __start_kubectl k" >> ~/.bashrc`
+- [Install helm](https://helm.sh/docs/intro/install/)
+    - Check with `helm ls -A`
 
 ## Todos
 ### MVP
