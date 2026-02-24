@@ -1,5 +1,14 @@
 # Homelab
 
+## Manual Setup
+Ideally there will be nothing here eventually
+
+- K3s install
+- Set nonsudo read permission on default k3s kubeconfig:
+    - `sudo chmod 604 /etc/rancher/k3s/k3s.yaml`
+- `echo "alias k='kubectl'" >> ~/.bashrc`
+- `echo "export KUBECONFIG=/etc/rancher/k3s/k3s.yaml" >> ~/.bashrc`
+
 ## Todos
 ### MVP
 - [X] Terraform provision Cloudflare initial setup
