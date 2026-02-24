@@ -4,10 +4,12 @@
 Ideally there will be nothing here eventually
 
 - K3s install
+    - `curl -sfL https://get.k3s.io | sh -`
 - Set nonsudo read permission on default k3s kubeconfig:
     - `sudo chmod 604 /etc/rancher/k3s/k3s.yaml`
-- `echo "alias k='kubectl'" >> ~/.bashrc`
 - `echo "export KUBECONFIG=/etc/rancher/k3s/k3s.yaml" >> ~/.bashrc`
+- `echo "source <(k3s completion bash)" >> ~/.bashrc`
+- `echo "complete -F __start_kubectl k" >> ~/.bashrc`
 
 ## Todos
 ### MVP
