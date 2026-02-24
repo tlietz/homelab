@@ -31,11 +31,11 @@ resource "cloudflare_dns_record" "homelab_service_records" {
 
   zone_id = local.secrets.homelab.cloudflare.zone_id
   name    = "*.service.${local.secrets.homelab.cloudflare.zone_name}"
-  ttl     = 3600
+  ttl     = 1
   type    = "A"
   comment = "Domain verification record for ${each.value.name}"
   content = each.value.ipv4
-  proxied = false
+  proxied = true
 }
 
 resource "cloudflare_dns_record" "homelab_service_records_ipv6" {
@@ -45,9 +45,9 @@ resource "cloudflare_dns_record" "homelab_service_records_ipv6" {
 
   zone_id = local.secrets.homelab.cloudflare.zone_id
   name    = "*.service.${local.secrets.homelab.cloudflare.zone_name}"
-  ttl     = 3600
+  ttl     = 1
   type    = "AAAA"
   comment = "Domain verification record (IPv6) ${each.value.name}"
   content = each.value.ipv6
-  proxied = false
+  proxied = true
 }
