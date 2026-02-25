@@ -11,7 +11,7 @@ Ideally there will be nothing here eventually
     - `sudo chmod 604 ~/.kube/config/k3s.yaml`
     - add to end of bashrc: 
       ```
-      KUBECONFIG=~/.kube/config/k3s.yaml
+      export KUBECONFIG=~/.kube/config/k3s.yaml
       source <(kubectl completion bash)
       alias k=kubectl
       complete -o default -F __start_kubectl k
