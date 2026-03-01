@@ -23,6 +23,7 @@ Ideally there will be nothing here eventually
 ### MVP
 - [X] Terraform provision Cloudflare initial setup
 - [X] Terraform [SOPS](https://getsops.io/) (Secure Operations) provider
+- [ ] [Reserve compute resources for host](https://kubernetes.io/docs/tasks/administer-cluster/reserve-compute-resources/). Without resources reserved for system, ran into issue where k8s was using too much resources and could not ssh into vps
 - [ ] Script-based SOPS secret management
 - [ ] SOPS git pre-commit hook 
 - [ ] Write Ansible k3s setup playbooks
